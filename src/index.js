@@ -1,9 +1,16 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import db from './db/dbCon.js';
+import mongoose from 'mongoose';
+// import db from './db/dbCon.js';
 import { ScheduleController } from './router/index.js';
 
 dotenv.config();
+
+const uri = process.env.MONGO_URI || '';
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 const app = express();
 app.use(express.json());
