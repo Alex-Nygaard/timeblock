@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const ActivitySchema = new mongoose.Schema({
-    userid: {
+    name: {
         type: String,
         required: true,
     },

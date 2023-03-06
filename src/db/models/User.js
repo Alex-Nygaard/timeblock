@@ -26,4 +26,4 @@ UserSchema.index({ userid: 1, email: 1 }, { unique: true });
 
 const UserModel = mongoose.model('User', UserSchema);
 
-export default ScheduleModel;
+export default UserModel;
